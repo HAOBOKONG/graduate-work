@@ -1,0 +1,76 @@
+:root {
+  font-family: Inter, "Microsoft YaHei", system-ui, sans-serif;
+  color: #1f2937;
+  background: #f3f6fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.status-card {
+  width: min(720px, calc(100% - 32px));
+  margin: 15vh auto 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 0;
+  color: #606266;
+}
+
+.site-header { padding: 24px; text-align: center; background: white; }
+.auth-card, .home-card { width: min(440px, calc(100% - 32px)); margin: 48px auto; }
+h2 { margin: 0; font-size: 1.2rem; }
+.submit-button { width: 100%; }
+.auth-link { margin-top: 20px; text-align: center; font-size: 14px; }
+.auth-link a { color: #409eff; text-decoration: none; }
+.nickname, .logout-button { margin-top: 20px; }
+
+.market-page { width: min(1100px, calc(100% - 32px)); margin: 24px auto 48px; }
+.market-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; background: white; border-radius: 8px; padding: 16px 20px; margin-bottom: 24px; }
+.market-nav a, .page-heading a, .product-actions a { color: #337ecc; text-decoration: none; }
+.nav-account { margin-left: auto; }
+.page-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.search-bar { display: flex; gap: 12px; margin-bottom: 24px; }
+.product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; min-height: 80px; margin: 20px 0; }
+.product-card { display: block; background: white; border: 1px solid #e4e7ed; border-radius: 8px; overflow: hidden; color: inherit; text-decoration: none; }
+.product-card:hover { border-color: #409eff; }
+.product-image { width: 100%; height: 190px; display: block; }
+.no-image { height: 190px; width: 100%; display: flex; align-items: center; justify-content: center; background: #eef1f5; color: #909399; }
+.product-body { padding: 16px; }
+.product-body h3 { margin: 0 0 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.product-body p { margin-top: 10px; }
+.price { color: #d94a38; font-size: 22px; }
+.muted { color: #909399; font-size: 13px; }
+.product-actions { display: flex; align-items: center; gap: 16px; padding: 12px 4px; }
+.publish-card { max-width: 700px; margin: auto; }
+.publish-card .el-alert { margin-bottom: 16px; }
+.detail-card p { margin: 16px 0; }
+.detail-images { display: flex; gap: 12px; overflow-x: auto; margin-top: 24px; }
+.detail-images .el-image { flex: 0 0 280px; height: 240px; background: #f5f7fa; }
+.description { white-space: pre-wrap; overflow-wrap: anywhere; }
+@media (max-width: 800px) { .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .product-grid { grid-template-columns: 1fr; } .market-nav { gap: 14px; } .nav-account { margin-left: 0; width: 100%; } }
+
+.order-card { margin: 16px 0; }
+.order-card p, .order-detail p { margin: 14px 0; overflow-wrap: anywhere; }
+.order-card .page-heading { gap: 12px; flex-wrap: wrap; }
+.order-card a, .order-detail a { color: #337ecc; text-decoration: none; }
+.order-actions { margin-top: 24px; }
